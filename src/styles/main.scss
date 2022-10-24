@@ -1,0 +1,75 @@
+@import '~normalize.css';
+@import './fonts.scss';
+
+body {
+	background: $background;
+	color: #ffffff;
+}
+.app {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: fit-content;
+	margin: 0 auto;
+	&__title {
+		font-family: 'Bubbles';
+		font-weight: 700;
+		text-align: center;
+		font-size: 58px;
+	}
+	.app-buttons {
+		& button {
+			border: none;
+			border-radius: 5px;
+			padding: 10px 15px;
+			color: rgba(255, 255, 255, 0.5);
+			background: rgb(61, 41, 99);
+			cursor: pointer;
+			&:hover {
+				background: rgb(231, 4, 129);
+				color: rgb(255, 255, 255);
+			}
+		}
+	}
+	.sound-active {
+		text-decoration: line-through;
+	}
+	.app-info {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		padding: 10px 15px;
+		border-radius: 5px;
+		background: rgb(61, 41, 99);
+	}
+	&__game {
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		gap: 15px;
+		user-select: none;
+		.game-item {
+			width: 100px;
+			height: 100px;
+			border-radius: 10px;
+			background: rgb(106, 198, 184);
+			font-size: 64px;
+			font-family: 'Bubbles';
+			font-weight: 700;
+			text-align: center;
+			line-height: 100px;
+			cursor: pointer;
+			transition: scale .2s;
+			&_empty {
+				background: rgb(61, 41, 99);
+			}
+		}
+	}
+	&__current-size {
+		text-align: center;
+	}
+	&__sizes {
+		text-align: center;
+	}
+}
